@@ -9,6 +9,7 @@ import { IoIosStarOutline } from "react-icons/io";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaChevronCircleUp } from "react-icons/fa";
+import Navbar from "./components/Navbar";
 
 const page = () => {
 
@@ -42,44 +43,7 @@ const page = () => {
             </nav>
           </div>
 
-      <div className={`${isNavbarFixed ? 'fixed left-0 top-[80px] w-full z-50' : 'mt-[80px]'} transition-all duration-500`}>
-
-          <div className='flex justify-between px-13 py-2'>
-            <div className="text-50px font-bold">MIVON</div>
-            <ul className='bg-[#1D1D1D]  flex gap-3  space-x-19 rounded-lg px-10 py-5 relative'>
-              <li className=" [&>ul]:hidden hover:[&>ul]:block ">
-                <button className="cursor-pointer">Home</button>
-                <ul className=" *:border-gray-400 w-60  z-100 bg-[#161616] absolute">
-                 <div className="border border-gray-400 p-2"> <li className="hover:text-gray-400"><Link href={'/'}>abdullah</Link></li>
-                  
-                  <li className="hover:text-gray-400">1555</li>
-                  <li className="hover:text-gray-400">1222</li>
-                  <li   className="hover:text-gray-400">12njkkjh</li>
-                  <li className="hover:text-gray-400">1222</li>
-                  <li className="hover:text-gray-400">1555</li>
-                  <li className="hover:text-gray-400">1222</li>
-                  <li   className="hover:text-gray-400">12njkkjh</li>
-                  <li className="hover:text-gray-400">1222</li>
-
-
-                  </div>
-                  
-                </ul>
-              </li>
-              <li>Pages</li>
-              <li>Works</li>
-              <li>Blogs</li>
-              <li>Contact Us</li>
-            </ul>
-            <div className='bg-white h-10 w-35 flex justify-center items-center  rounded-full'>
-              <button className=' space-x-3 flex p-1 '>
-                <span className='text-black mt-1 '>Purchase</span>
-                <div className='h-8 w-8 rounded-full bg-black p-2 ml-2'><FaArrowRightLong color='white' /></div>
-              </button>
-            </div>
-          </div>
-      </div>
-
+      <Navbar isNavbarFixed={isNavbarFixed}/>
 
       <Scrollbar
         damping={0.8}
