@@ -46,13 +46,31 @@ const page = () => {
 
           <div className='flex justify-between px-13 py-2'>
             <div className="text-50px font-bold">MIVON</div>
-            <div className='bg-[#1D1D1D] space-x-19 rounded-lg px-10 py-5 '>
-              <button>Home</button>
-              <button>Pages</button>
-              <button>Works</button>
-              <button>Blogs</button>
-              <button>Contact Us</button>
-            </div>
+            <ul className='bg-[#1D1D1D]  flex gap-3  space-x-19 rounded-lg px-10 py-5 relative'>
+              <li className=" [&>ul]:hidden hover:[&>ul]:block ">
+                <button className="cursor-pointer">Home</button>
+                <ul className=" *:border-gray-400 w-60  z-100 bg-[#161616] absolute">
+                 <div className="border border-gray-400 p-2"> <li className="hover:text-gray-400"><Link href={'/'}>abdullah</Link></li>
+                  
+                  <li className="hover:text-gray-400">1555</li>
+                  <li className="hover:text-gray-400">1222</li>
+                  <li   className="hover:text-gray-400">12njkkjh</li>
+                  <li className="hover:text-gray-400">1222</li>
+                  <li className="hover:text-gray-400">1555</li>
+                  <li className="hover:text-gray-400">1222</li>
+                  <li   className="hover:text-gray-400">12njkkjh</li>
+                  <li className="hover:text-gray-400">1222</li>
+
+
+                  </div>
+                  
+                </ul>
+              </li>
+              <li>Pages</li>
+              <li>Works</li>
+              <li>Blogs</li>
+              <li>Contact Us</li>
+            </ul>
             <div className='bg-white h-10 w-35 flex justify-center items-center  rounded-full'>
               <button className=' space-x-3 flex p-1 '>
                 <span className='text-black mt-1 '>Purchase</span>
@@ -369,7 +387,7 @@ const page = () => {
 
           </div>
           <div className={`${isNavbarFixed ? 'fixed right-0 bottom-[80px] w-full z-50' : 'mt-[80px]'} transition-all duration-500`}>
-          <div className={ `mt-30 ml-320    `}>
+          <div className={ `mt-30 ml-360    `}>
               <button className="h-8 w-8 rounded-full bg-transparent  flex justify-end "><FaChevronCircleUp size={'50'} />
 
               </button>

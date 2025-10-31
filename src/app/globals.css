@@ -45,3 +45,14 @@ body {
   @apply
   p-2
 }
+/* .image{
+  
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    height: 50%;
+    opacity: 0.7;
+    transition: all 0.4s;
+    z-index: -1;
+
+} */
