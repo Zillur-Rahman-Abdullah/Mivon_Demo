@@ -12,38 +12,10 @@ import { FaChevronCircleUp } from "react-icons/fa";
 import Navbar from "./components/Navbar";
 
 const page = () => {
-
-  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setIsNavbarFixed(true)
-      } else {
-        setIsNavbarFixed(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  },[])
-
   return (
     <div>
 
-
-
-          <div className=' w-full h-[100px] fixed top-0 left-0 z-100'>
-            <nav className='w-full bg-[#262626]  '>
-              <ul className='flex justify-between p-3'>
-                <li ><a href="#"><span className='font-extrabold'>envato</span>market</a></li>
-                <li ><button className='bg-[#7AA93C] rounded-lg px-4 py-2 text-[13px]'><a href="#">Buy Now</a></button></li>
-              </ul>
-            </nav>
-          </div>
-
-      <Navbar isNavbarFixed={isNavbarFixed}/>
+      <Navbar topBar={true} />
 
       <Scrollbar
         damping={0.8}
@@ -52,7 +24,7 @@ const page = () => {
         alwaysShowTracks={false}
         continuousScrolling={true}
       >
-        <div className='bg-[#161616] flex-col gap-y-3.5 h-full pt-[60px]'>
+        <div className=' flex-col gap-y-3.5 h-full pt-[60px]'>
 
           <div className=''>
             <div className='px-26 py-13'>
@@ -96,10 +68,10 @@ const page = () => {
               <div className='h-full relative overflow-hidden hover:overflow-visible hover:*:bottom-[50px]'>
                 <img className='rounded-[30px] h-full' src={'https://fastly.picsum.photos/id/15/2500/1667.jpg?hmac=Lv03D1Y3AsZ9L2tMMC1KQZekBVaQSDc1waqJ54IHvo4'} />
                 <div className='flex items-center justify-center gap-2 absolute left-[190px] bottom-[-50px] transition-all duration-500'>
-                  <Link href={'/One'}><button class="px-6 py-3 rounded-full bg-gray-400/10 backdrop-blur-lg text-black cursor-pointer">
+                  <Link href={'/One'}><button className="px-6 py-3 rounded-full bg-gray-400/10 backdrop-blur-lg text-black cursor-pointer">
                     Multiple Page
                   </button></Link>
-                  <button class="px-6 py-3 rounded-full bg-white text-black cursor-pointer">
+                  <button className="px-6 py-3 rounded-full bg-white text-black cursor-pointer">
                     One Page
                   </button>
                 </div>
@@ -328,36 +300,38 @@ const page = () => {
           <div className='bg-[#161616] w-full h-90 pt-20'>
 
           </div>
-          
+
         </div>
       </Scrollbar>
-      
+
       <div className='back flex flex-col justify-center items-center rounded-t-3xl '>
-            <p className='text-white text-[12px]   '>BUILD A TOP SITE IN A FEW MOMENTS </p>
-            <div className="flex flex-col gap-0">
-              <p className='text-white text-[80px]'>Let’s start a top</p>
-              <p className='text-white text-[80px] '>creative website</p>
-            </div>
-            <div>
-              <button className="h-13 w-48 rounded-full bg-[#9F8BE7] flex  justify-center items-center gap-x-6 text-[13px] cursor-pointer ">PURCHASE NOW<div className='h-8 w-8 rounded-full bg-black flex  justify-center items-center'><FaArrowRightLong color='white' size={'16'} />
-              </div></button>
-            </div>
-              {/* <div className={ `mt-30 ml-320    `}>
+        <p className='text-white text-[12px]   '>BUILD A TOP SITE IN A FEW MOMENTS </p>
+        <div className="flex flex-col gap-0">
+          <p className='text-white text-[80px]'>Let’s start a top</p>
+          <p className='text-white text-[80px] '>creative website</p>
+        </div>
+        <div>
+          <button className="h-13 w-48 rounded-full bg-[#9F8BE7] flex  justify-center items-center gap-x-6 text-[13px] cursor-pointer ">PURCHASE NOW<div className='h-8 w-8 rounded-full bg-black flex  justify-center items-center'><FaArrowRightLong color='white' size={'16'} />
+          </div></button>
+        </div>
+        {/* <div className={ `mt-30 ml-320    `}>
               <button className="h-8 w-8 rounded-full bg-transparent  flex justify-end "><FaChevronCircleUp />
 
               </button>
             </div> */}
 
 
-          </div>
-          <div className={`${isNavbarFixed ? 'fixed right-0 bottom-[80px] w-full z-50' : 'mt-[80px]'} transition-all duration-500`}>
-          <div className={ `mt-30 ml-360    `}>
-              <button className="h-8 w-8 rounded-full bg-transparent  flex justify-end "><FaChevronCircleUp size={'50'} />
+      </div>
 
-              </button>
-            </div>
 
+      {/* <div className={`${isNavbarFixed ? 'fixed right-0 bottom-[80px] w-full z-50' : 'mt-[80px]'} transition-all duration-500`}>
+        <div className={`mt-30 ml-360    `}>
+          <button className="h-8 w-8 rounded-full bg-transparent  flex justify-end "><FaChevronCircleUp size={'50'} />
+
+          </button>
         </div>
+
+      </div> */}
 
 
     </div>
